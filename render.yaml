@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: whatsapp-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: SESSION_NAME
+        value: whatsapp-bot
+      - key: PORT
+        value: 10000
